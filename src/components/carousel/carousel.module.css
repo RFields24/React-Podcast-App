@@ -1,8 +1,45 @@
 .carousel{
+  margin-top: 5rem;
+  height: 30%;
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #cacaca;
+}
+
+.arrowLeft, .arrowRight{
+  height: 20px;
 }
 
 .left{
-  width:80%;
+  width:70%;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+}
+
+.play{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1rem;
+  padding: 15px;
+  color: white;
+  background: black;
+  width: 75px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+}
+
+.play:hover{
+  background: #cacaca;
+  color: black;
+}
+.playIcon{
+  height: 20px;
+  filter: invert(1);
 }
