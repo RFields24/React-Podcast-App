@@ -16,10 +16,10 @@ function Carousel() {
           <img className={carouselStyle.arrowRight} src={arrowRight} alt="" />
         </div>
         <div className={carouselStyle.info}>
-          <h3>Podcast Name</h3>
-          <h1>Episode name Episode name</h1>
+          <h3 className={carouselStyle.h3}>Skip and Shannon: Undisputed</h3>
+          <h1 className={carouselStyle.h2}>Episode name Episode name</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ullam quasi error quisquam vel vero nulla repellat sint! Accusamus voluptas voluptatibus voluptatem libero earum laborum?
+          The Skip and Shannon: Undisputed Podcast. Skip Bayless, Shannon Sharpe, and Jenny Taft discuss the biggest stories in the world of sports. It's unscripted and unfiltered. Don't miss the television show Monday-Friday at 9:30am ET on FS1.
           </p>
           <span>45 mins</span>
           <button className={carouselStyle.play}>Play

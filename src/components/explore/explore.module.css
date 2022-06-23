@@ -11,40 +11,46 @@
 .cardContainer{
   display: flex;
   height: 80%;
-  width: 70%;
-  margin: 5rem auto 5rem auto;
+  width: 80%;
+  margin: 4rem auto 4rem auto;
 }
 
 .left, .right{
-  width: 50%;
+  width: 60%;
   height: 100%;
 }
 
   /* CARD */
 
   .card{
+    border-radius: 5;
     padding-left: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10%;
+    height: 20%;
+  }
+
+  .card:hover{
+    background: black;
+    color: white;
   }
 
   .img{
     border-radius: 5px;
-    height: 50px;
+    height: 70px;
   }
 
   .h2{
     position: relative;
     top: 10px;
-    font-size: .8rem;
+    font-size: 1rem;
     padding-bottom: 0;
   }
   .p{
     position: relative;
     bottom: 10px;
-    font-size: .7rem;
+    font-size: .8rem;
   }
   .info{
     padding-left: .5rem;

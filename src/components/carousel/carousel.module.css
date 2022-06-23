@@ -11,6 +11,12 @@
 .arrowLeft, .arrowRight{
   height: 20px;
 }
+.h2{
+  margin: 0;
+}
+.h3{
+  margin: .5rem 0 .5rem 0;
+}
 
 .left{
   width:70%;
