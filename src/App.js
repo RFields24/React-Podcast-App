@@ -6,7 +6,7 @@ import Explore from './components/explore/Explore.js'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="app">
       <Header />
       <Carousel />
       <Row />

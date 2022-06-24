@@ -28,6 +28,8 @@
 }
 
 .play{
+  font-size: 1rem;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -35,14 +37,15 @@
   padding: 15px;
   color: white;
   background: black;
-  width: 75px;
-  height: 30px;
+  width: 80px;
+  height: 35px;
   border: none;
   border-radius: 20px;
+  transition: 1s;
 }
 
 .play:hover{
-  background: #cacaca;
+  background: white;
   color: black;
 }
 .playIcon{

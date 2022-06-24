@@ -6,7 +6,9 @@ import App from './App';
 import PodcastHome from './components/routes/podcasthome/PodcastHome.js';
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <BrowserRouter>
     <Routes>

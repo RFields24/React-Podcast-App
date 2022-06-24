@@ -6,7 +6,12 @@
 }
 
 .listItem{
+  border-radius: 5px;
   padding: 0 5rem 2rem 5rem;
   border-bottom: 1px solid #cacaca;
   
+}
+.listItem:hover{
+  background: black;
+  color: white;
 }

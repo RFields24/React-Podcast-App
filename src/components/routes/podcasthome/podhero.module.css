@@ -27,6 +27,7 @@
   padding: 15px 25px;
   border: none;
   border-radius: 50px;
+  transition: 1s;
 }
 .button:hover{
   color: black;
