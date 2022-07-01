@@ -25,14 +25,11 @@ function Carousel() {
           The Skip and Shannon: Undisputed Podcast. Skip Bayless, Shannon Sharpe, and Jenny Taft discuss the biggest stories in the world of sports. It's unscripted and unfiltered. Don't miss the television show Monday-Friday at 9:30am ET on FS1.
           </p>
           <span>45 mins</span>
-          <button onClick={() => {
-            document.querySelector('#app')
-            
-            
-              
+          <button onClick={ function moveContent() {
             
             setStartAnimation(!startAnimation)}} 
             className={carouselStyle.play}>Play
+          
           <img className={carouselStyle.playIcon} src={playIcon} alt="" />
           </button>
         </div>
