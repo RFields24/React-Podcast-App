@@ -1,5 +1,5 @@
-import { useState, useEffect} from 'react'
-import axios from 'axios'
+// import { useState, useEffect} from 'react'
+// import axios from 'axios'
 import './App.css';
 import Header from './components/header/Header.js';
 import Carousel from './components/carousel/Carousel.js'
@@ -10,42 +10,44 @@ import {useSpring, animated as a} from 'react-spring'
 
 function App() {
 
-  // GET TOKEN ON REDIRECT FROM SPOTIFY SIGN IN
+  // // GET TOKEN ON REDIRECT FROM SPOTIFY SIGN IN
   
-  const [token, setToken] = useState('')
+  // const [token, setToken] = useState('')
 
-  useEffect(() => {
-    const hash = window.location.hash
+  // useEffect(() => {
+  //   const hash = window.location.hash
 
-    let token = window.localStorage.getItem('token')
+  //   let token = window.localStorage.getItem('token')
 
-    if(!token && hash){
-      token = hash.substring(1).split("&").find(elem => elem.startsWith("access_token")).split("=")[1]
+  //   if(!token && hash){
+  //     token = hash.substring(1).split("&").find(elem => elem.startsWith("access_token")).split("=")[1]
 
-      // SET TOKEN IN LOCAL STORAGE
+  //     // SET TOKEN IN LOCAL STORAGE
 
-      window.location.hash = ""
-      window.localStorage.setItem('token', token)
-      setToken(token)
+  //     window.location.hash = ""
+  //     window.localStorage.setItem('token', token)
       
-    }
+      
+  //   }
 
-
-  }, [])
+  //   setToken(token)
+  //   console.log(token)
+  // }, [])
   
-    fetch('https://api.spotify.com/v1/shows', {
-            method: 'GET', headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            }
-        })
-            .then((response) => {
-                console.log(response.json().then(
-                    (data) => { console.log(data) }
-                ));
-            });
-  
+  //   const getData = async (e) => {
+  //     e.preventDefault()
+  //     const {data} = await axios.get("https://api.spotify.com/v1/search", {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`
+  //       },
+  //       params:{
+  //         q: "searchKey",
+  //         type: "artist"
+  //       }
+  //     })
+  //   }
+  //   console.log(data)
+  //   getData()
 
 
   return (

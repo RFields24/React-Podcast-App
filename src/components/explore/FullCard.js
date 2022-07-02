@@ -3,6 +3,18 @@ import podcastCover from '../img/pcard2.jpg'
 import exploreStyle from './explore.module.css'
 import {Link} from 'react-router-dom'
 
+const {Client} = require('podcast-api')
+
+const client = Client({
+  apiKey: process.env.d833c3f184974abea2b3f129dcabd7a7 || null,
+});
+
+client.fetchBestPodcasts({page: 2, region: 'us' }).then((response) => {
+  console.log(response.data);
+}).catch((error) => {
+  console.log(error);
+});
+
 function FullCard() {
   return (
     <Link to = "/podcasthome" className={exploreStyle.link}>
