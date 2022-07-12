@@ -48,11 +48,14 @@
     padding-bottom: 0;
   }
   .p{
+    padding-bottom: 1rem;
+    height: 40px;
     position: relative;
     bottom: 10px;
     font-size: .8rem;
   }
   .info{
+    overflow: hidden;
     padding-left: .5rem;
     position: relative;
     display: flex;
