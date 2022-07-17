@@ -6,10 +6,14 @@ import podcastCover from '../img/podcastcover.jpg'
 import playIcon from '../img/play.png'
 import Player from '../player/Player.js'
 import SpringIn from '../player/SpringIn.js'
-
+import Shows from '../explore/fullcard.json'
 
 
 function Carousel() {
+
+  // const show = Shows[0].podcasts[14]
+  // console.log(show)
+
   const [startAnimation, setStartAnimation] = useState(false);
   return (
     <div className={carouselStyle.carousel}>
@@ -34,7 +38,7 @@ function Carousel() {
           </button>
         </div>
       </div>
-      <div>
+      <div className={carouselStyle.imageContainer}>
         <img className={carouselStyle.podCover} src={podcastCover} alt="" />
       </div>
       { startAnimation && <SpringIn>

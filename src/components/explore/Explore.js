@@ -8,6 +8,7 @@ function Explore() {
       <div className={exploreStyle.cardContainer}>
         <div className={exploreStyle.left}>
           <FullCard />
+          {/* <FullCard />
           <FullCard />
           <FullCard />
           <FullCard />
@@ -17,11 +18,11 @@ function Explore() {
           <FullCard />
           <FullCard />
           <FullCard />
-          <FullCard />
-          <FullCard />
+          <FullCard /> */}
         </div>
         <div className={exploreStyle.right}>
           <FullCard />
+          {/* <FullCard />
           <FullCard />
           <FullCard />
           <FullCard />
@@ -31,8 +32,7 @@ function Explore() {
           <FullCard />
           <FullCard />
           <FullCard />
-          <FullCard />
-          <FullCard />
+          <FullCard /> */}
         </div>
       </div>
     </div>

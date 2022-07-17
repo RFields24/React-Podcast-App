@@ -1,6 +1,10 @@
 import React from 'react'
 import listStyle from './episode.module.css'
+// import Shows from '../../explore/fullcard.json'
+
 function ListItem() {
+
+
   return (
     <div className={listStyle.listItem}>
       <h3>Best Of (NBA Draft preview: Could Paolo Banchero be the No. 1 pick?)</h3>

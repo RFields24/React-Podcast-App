@@ -17,3 +17,12 @@
 .search{
   height: 40px;
 }
+
+@media(max-width: 480px){
+  .logo{
+    padding-left: 1rem;
+}
+.search{
+  padding-right: 1rem;
+}
+}

@@ -6,12 +6,10 @@ function Row() {
     <div className={rowStyle.container}>
       <h2 className={rowStyle.h2}>Section Title</h2>
       <div className={rowStyle.row}>
-        <PodCard />
-        <PodCard />
-        <PodCard />
-        <PodCard />
-        <PodCard />
-        <PodCard />
+      
+      <PodCard />
+        
+        
       </div>
     </div>
   )

@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 1rem;
+  margin: 1rem 0;
   padding: 15px;
   color: white;
   background: black;
@@ -51,4 +51,29 @@
 .playIcon{
   height: 20px;
   filter: invert(1);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 480px) {
+  .carousel{
+    flex-direction: column;
+  }
+
+  .imageContainer{
+    order: 1;
+  }
+  .left{
+    order: 2;
+  }
+
+  .h2{
+    font-size: 1.5rem;
+  }
+  .arrows{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
 }

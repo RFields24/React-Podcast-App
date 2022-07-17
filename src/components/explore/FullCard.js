@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import podcastCover from '../img/pcard2.jpg'
+// import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+// import podcastCover from '../img/pcard2.jpg'
 import exploreStyle from './explore.module.css'
 import {Link} from 'react-router-dom'
 import Shows from './fullcard.json'
+import axios from 'axios'
 
-const epDescription = 'Not yet Fetched'
-const shows = Shows[0].podcast
+// const epDescription = 'Not yet Fetched'
+const shows = Shows[0].podcasts
+console.log(shows)
+// const id = Shows[0].podcast[0].id
+// console.log(id)
 // class FullCard extends Component {
 
 
@@ -41,22 +46,61 @@ const shows = Shows[0].podcast
 
 function FullCard() {
 
+  // TEMPORARY START FOR SEE MORE FUNCTIONALITY
+
+  const [isSeeMoreShown, setSeeMoreShown] = useState(false)
+
+  const toggle = () => {
+      setSeeMoreShown(prevState => !prevState)
+  }
   return (
-    <Link to = "/podcasthome" className={exploreStyle.link}>
+    <Link to = "/podcasthome"className={exploreStyle.link}>
       { 
 
         // MAPPING PODCASTS TO EXPLORE SECTION
-        
+
         shows.map((show, index) =>{
+          // const id = show.podcast.id
+          // console.log(id)
+            // PULL ID TO PROVIDE DETAILS PAGE INFO
+          const  getPodcast =() => {
+            const id = show.id
+            console.log(id)
+
+            const options = {
+              method: 'GET',
+              headers: {
+                'X-ListenAPI-Key': 'd833c3f184974abea2b3f129dcabd7a7'
+              }
+            };
+            
+            // fetch(`https://listen-api-test.listennotes.com/api/v2/podcasts/${id}`, options)
+            // .then(res => res.json())
+            // .then(data => console.log(data))
+            
+            const getDetails = async () => {
+                const response = await axios.get(`https://listen-api-test.listennotes.com/api/v2/podcasts/${id}`, options)
+                // console.log(response)
+                const podcast = await response.data.podcasts
+                console.log(podcast)
+            
+          }
+          getDetails()
+        }
+
+         
           return(
-            <div className={exploreStyle.card}>
-              <div className={exploreStyle.imageContainer}>
-                <img className={exploreStyle.img} src={show.image} alt="" />
-              </div>
-              <div className={exploreStyle.info}>
-                <h2 className={exploreStyle.h2}>{show.title}</h2>
-                <p className={exploreStyle.p}>{show.description}</p>
-              </div>
+            <div onClick={getPodcast} className={exploreStyle.card}>
+
+              
+                <div className={exploreStyle.imageContainer}>
+                  <img className={exploreStyle.img} src={show.image} alt="" />
+                </div>
+                <div className={exploreStyle.info}>
+                  <h2 className={exploreStyle.h2}>{show.title}</h2>
+                  <p className={exploreStyle.p}>{isSeeMoreShown ? show.description : show.description.substr(0,100)}</p>
+                  <button className={exploreStyle.seeMore} onClick={toggle}>{isSeeMoreShown ? 'See Less' : 'See More'}</button>
+                </div>
             </div>
           )
         })
@@ -72,7 +116,7 @@ function FullCard() {
           <p className={exploreStyle.p}>{epDescription}</p>
         </div>
       </div> */}
-     </Link> 
+    </Link> 
   )
 }
 
