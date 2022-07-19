@@ -8,6 +8,8 @@ function EpisodeList() {
     <div className={listStyle.container}>
       <h3>Episodes</h3>
       <ListItem />
+      <ListItem />
+      <ListItem />
     </div>
   )
 }

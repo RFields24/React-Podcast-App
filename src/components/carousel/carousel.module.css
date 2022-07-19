@@ -15,6 +15,7 @@
   margin: 0;
 }
 .h3{
+  font-size: .8rem;
   margin: .5rem 0 .5rem 0;
 }
 
@@ -33,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 1rem 0;
+  margin: 2rem 0;
   padding: 15px;
   color: white;
   background: black;
@@ -58,10 +59,16 @@
 @media (max-width: 480px) {
   .carousel{
     flex-direction: column;
+    
+  }
+  .info{
+    display: flex;
+    align-items: center;
   }
 
   .imageContainer{
     order: 1;
+    margin-bottom: 1rem;
   }
   .left{
     order: 2;
@@ -70,10 +77,9 @@
   .h2{
     font-size: 1.5rem;
   }
-  .arrows{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .arrowRight, .arrowLeft{
+    display: none;
+    
   }
   
 }

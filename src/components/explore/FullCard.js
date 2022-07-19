@@ -98,7 +98,7 @@ function FullCard() {
                 </div>
                 <div className={exploreStyle.info}>
                   <h2 className={exploreStyle.h2}>{show.title}</h2>
-                  <p className={exploreStyle.p}>{isSeeMoreShown ? show.description : show.description.substr(0,100)}</p>
+                  <p className={exploreStyle.p}>{show.description.substr(0,200)+ '...'}</p>
                   <button className={exploreStyle.seeMore} onClick={toggle}>{isSeeMoreShown ? 'See Less' : 'See More'}</button>
                 </div>
             </div>

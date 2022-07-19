@@ -10,9 +10,11 @@
 }
 .cardContainer{
   display: flex;
-  height: 80%;
-  width: 80%;
-  margin: 4rem auto 4rem auto;
+  height: 70vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 90%;
+  margin: 2rem auto 2rem auto;
 }
 
 .left, .right{
@@ -48,15 +50,20 @@
     padding-bottom: 0;
   }
   .p{
-    padding-bottom: 1rem;
+    width: 90%;
+    /* padding-bottom: 1rem; */
     height: 40px;
     position: relative;
     bottom: 10px;
     font-size: .8rem;
   }
+
+  
   .info{
+    width: 100%;
     overflow: hidden;
     padding-left: .5rem;
+    padding-bottom: 1rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -68,6 +75,9 @@
   }
 
   .seeMore{
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
     font-weight: 500;
     /* height: 30px; */
     /* width: 70px; */

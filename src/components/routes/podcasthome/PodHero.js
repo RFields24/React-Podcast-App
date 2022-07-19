@@ -6,7 +6,7 @@ import Shows from '../../explore/fullcard.json'
 function PodHero() {
   // PULLING A SINGLE PODCAST MANUALLY
 
-  const show = Shows[0].podcasts[1]
+  const show = Shows[0].podcasts[14]
   console.log(show)
   
   return (
